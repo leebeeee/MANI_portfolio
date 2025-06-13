@@ -1,0 +1,720 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Noto Sans", sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.dynalight-regular {
+    font-family: "Dynalight", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+  
+
+body{
+    color: #031CA6;
+    line-height: 1.6;
+    background-color: #f2f2f2;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0112AB;
+    height: 100px;
+    width: 100%;
+    color: #b7d9ff;
+    padding: 0rem 3rem;
+    z-index: 1;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 전체 내비 스타일 */
+.navbar .menu{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: #FFD101;
+}
+
+.menu_m{
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.submenu{
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f2f2f2;
+    min-width: 180px;
+    top: 100%;
+}
+
+.submenu li{
+    border-bottom: 1px solid #0622BF;
+}
+
+.submenu li a{
+    color: #0622BF;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.875rem; /* 14px */
+}
+
+.submenu li a:hover{
+    background-color: #FFD101;
+    color: #0622BF;
+    font-weight: bold;
+}
+
+.menu_m:hover .submenu{
+    display: block;
+}
+
+.hero{
+    position: relative;
+    background-image: url(../img/main_visual_01.png); /* 이미지경로 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #FFD101;
+}
+
+.hero_content h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-family: "Kaushan Script";
+}
+
+.hero_content p{
+    font-size: 1.2rem;
+    color: #f2f2f2;
+    margin-bottom: 2rem;
+}
+
+.cta-btn{
+    /* background-color:#000000; */
+    background-color: transparent;
+    color: #f4f4f4;
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: solid 3px #f2f2f2;
+}
+
+.cta-btn:hover{
+    box-shadow: 5px 5px 0 #0622BF, 10px 10px 0 #FFD101;
+    transition: 0.5s;
+}
+
+.t_wroK{
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+.t_wroK h1{
+    padding-top: 100px;
+    text-align: center;
+    color: #FFD101;
+    font-size: 3rem;
+    width: 1200px;
+    background-color: #0112AB;
+    margin: 0 auto;
+    padding: 0%;
+}
+
+
+section{
+    color: #0622BF;
+    background-color: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.work{
+    display: flex;
+    gap: 50px;
+}
+
+.hexa{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.hexa:hover{
+    transform: translateY(-40px);
+}
+
+.hexa .cap{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #ffffff;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 1;
+    transform: translateY(20px);
+}
+
+.hexa:hover .cap{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.hexa .cap h2{
+    font-size: 2rem;
+}
+
+.hexa:nth-child(1):hover .cap h2{
+    color: #FFD101;
+}
+
+.hexa:nth-child(2):hover .cap h2{
+    color: #0622BF;
+}
+
+.hexa:nth-child(3):hover .cap h2{
+    color: #FFD101;
+}
+
+
+
+.shape{
+    clip-path: circle(50%);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    overflow: hidden;
+}
+
+.shape img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about{
+    background-color: #F2F2F2;
+    position: relative;
+    height: auto;
+}
+
+.section-inner{
+    width: 100%;
+/*     height: 100vh; */
+}
+
+.accordion-content{
+    display: flex;
+}
+
+/* .focus{
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.accordion{
+    flex: 4;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.accordion *{
+    transition: 0.5s;
+}
+
+.accordion li{
+    height: 600px;
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* 하나의 축을 기준으로 세로로 정렬함 */
+    justify-content: flex-end; /* justify-content: 한축을 기준으로 끝쪽으로 정렬하는 코드;*/
+    padding: 20px;
+    border-right: 1px solid #b6ccf8;
+    cursor: pointer;
+}
+
+.accordion li .number{
+    color: #0622BF;
+    font-size: 5rem;
+}
+
+.accordion li .info{
+    color: #0622BF
+}
+
+.accordion:hover li{
+    flex: 1;
+}
+
+.accordion li:hover{
+    flex: 2;
+    background-color: #0622BF;
+}
+
+.accordion li:hover .number{
+    color: #f2f2f2;
+    font-size: 10rem;
+}
+
+.accordion li:hover .info{
+    color: #f2f2f2;
+}
+
+.accordion li:hover .number:after{
+    background-color: #f2f2f2;
+}
+
+.accordion li:before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.accordion li .number{
+    font-size: 8rem;
+    position: relative;
+    transform: translateY(-120px);
+}
+
+.accordion li .number:after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    background-color: #0622BF;
+    bottom: -90px;
+    left: 0;
+}
+
+.accordion li .info:hover{
+    color: #f2f2f2
+}
+
+.bar {
+    height: 3px;                   
+    background-color: #0622BF;    
+    margin: 20px 200px; 
+}
+
+  
+.poster h1 {
+    /* color: #FFD101;
+    background-color: #0112AB;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px; */
+
+    padding-top: 100px;
+    text-align: center;
+    color: #FFD101;
+    font-size: 3rem;
+    width: 1200px;
+    background-color: #0112AB;
+    margin: 0 auto;
+    padding: 0%;
+}
+  
+  /* Flexbox 적용 */
+.poster {
+    padding: 40px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.poster .poto-wrapper {
+    display: flex;
+    gap: 30px;         /* 포스터 사이 간격 */
+    justify-content: center;
+    flex-wrap: wrap;   /* 줄바꿈 허용 (반응형 대응용) */
+}
+  
+.poto {
+    margin-top: 30px;
+    width: 350px;
+    aspect-ratio: 16 / 9;
+    text-align: center;
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.3s;
+}
+
+.poto:hover{
+    transform: translateY(-40px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #0622BF;
+    color: #FFD101;
+}  
+  
+.poto img {
+    width: 100%;
+    height: auto;
+    background: #0622BF; /* 임시 배경 (이미지 없을 경우) */
+    display: block;
+}
+
+.poto p{
+    margin: 10px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.video {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+  
+.video h1 {
+    padding-top: 50px;
+    text-align: center;
+    color: #FFD101;
+    font-size: 3rem;
+    width: 1200px;
+    background-color: #0112AB;
+    margin: 0 auto;
+    padding: 0%;
+    margin-bottom: 80px;
+}
+  
+.vd_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0622BF;
+    padding: 30px;
+    gap: 40px;
+    width: 90%;
+    height: 500px; 
+    box-sizing: border-box;
+    margin-left: 5%;
+    border-radius: 30px;
+}
+  
+.vd_wrapper img {
+    margin-left: 300px;
+    width: 600px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0; 
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.vd_wrapper img:hover {
+    transform: scale(1.05); 
+}
+  
+.vd_text {
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.vd_title:hover{
+    color: #FFD101;
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+.vd_title {
+    color: #f2f2f2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.vd_desc {
+    font-size: 1rem;
+}
+  
+.project {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+  
+.project h1 {
+    padding-top: 50px;
+    text-align: center;
+    color: #FFD101;
+    font-size: 3rem;
+    width: 1200px;
+    background-color: #0112AB;
+    margin: 0 auto;
+    padding: 0%;
+    margin-bottom: 80px;
+}
+  
+.pj_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0622BF;
+    padding: 30px;
+    gap: 40px;
+    width: 90%;
+    height: 500px;
+    box-sizing: border-box;
+    margin-left: 5%;
+    border-radius: 30px;
+    
+}
+
+.pj_wrapper img {
+    margin-left: 300px;
+    width: 600px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.pj_wrapper img:hover {
+    transform: scale(1.05); 
+}
+  
+.pj_text {
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+  
+.pj_title {
+    color: #f2f2f2;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pj_title:hover{
+    color: #FFD101;
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+.pj_desc {
+    font-size: 1rem;
+}
+
+
+
+
+.poster_box {
+    display: grid;
+    grid-template-rows: 1fr 0fr;
+    max-width: 1000px;
+    min-height: 450px;
+    width: 100%;
+    margin: 0 auto 50px;
+    padding: 2.5rem 2rem; 
+    border: 3px solid #0112AB;
+    border-radius: 25px; 
+    /* display: flex;  */
+    /* align-items: center; */
+    gap: 2rem;
+    background: rgba(244, 244, 244, 0.7);
+    box-shadow: 0 0px 15px rgba(43, 43, 43, 0.3);
+
+    overflow: hidden; 
+    /* transition: max-height 0.7s cubic-bezier(.4,2,.6,1), box-shadow 0.4s, transform 0.4s;  */
+    transition: max-height 1.5s cubic-bezier(.4,2,.6,1), box-shadow 0.6s, transform 1.5s;
+    cursor: pointer;
+    flex-direction: column;
+    max-height: 340px;
+}
+
+.poster_main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 36px;
+  min-height: 0; /* 중요! */
+  overflow: hidden;
+}
+
+.hidden_img {
+    max-height: 0; 
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.hidden_img img {
+    width: 280px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.poster_hidden {
+/*     max-height: 0; 
+    opacity: 0;
+    transition: all 0.5s ease; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 28px;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.7s cubic-bezier(.4,2,.6,1), opacity 0.4s;
+    
+}
+
+.poster_hidden img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+
+.poster_hidden img:hover {
+  transform: scale(1.2) translateY(-20px); 
+  position: relative; 
+  z-index: 10; 
+}
+
+.poster_img {
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+    /* border: 3px solid #FFD101; */
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* .poster_img:hover {
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(-20px); 
+} */
+
+.poster_box:hover .hidden_img {
+    max-height: 500px; /* 이미지 높이에 맞게 조정 */
+    opacity: 1;
+}
+
+.poster_box:hover .poster_hidden {
+    max-height: 800px; /* 이미지 높이에 맞게 조정 */
+    opacity: 1;
+}
+
+.poster_box:hover {
+   max-height: 1200px; /* 확장 시 충분히 크게 */
+    box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+    transform: translateY(-10px);
+}
+
+
+
+
+.poster_txt {
+/*     font-size: 1rem;
+    padding: 1rem;
+    flex: 1;
+    color: #0112AB; */
+
+    flex: 1;
+    color: #0112AB;
+    font-size: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.poster_txt h4 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    position: relative;
+    color: #0622BF;
+    height: 100px;
+    border-top: 3px solid #0622BF;
+}
+
+footer p{
+    margin: 0;
+    cursor: pointer;
+}
+
+footer p:hover{
+    font-weight: bold;
+}

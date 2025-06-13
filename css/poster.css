@@ -1,0 +1,328 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap);
+* {
+    margin: 0;
+    padding: 0; /* padding: 0 auto; → padding: 0; */
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Noto Sans", sans-serif;
+    text-decoration: none;
+}
+
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* font-weight: weight; → font-weight: 400; */
+    font-style: normal;
+}
+
+.dynalight-regular {
+    font-family: "Dynalight", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kaushan-script-regular {
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    color: #031CA6;
+    line-height: 1.6;
+    /* background-color: #f2f2f2; */
+
+    background-image: url('../img/clouds_002.png'); /* 이미지 경로를 원하는 것으로 변경 */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0112AB;
+    height: 100px;
+    width: 100%;
+    color: #b7d9ff;
+    padding: 0rem 3rem;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #FFD101;
+}
+
+.menu_m {
+    position: relative;
+    text-align: center;
+    padding: 1.5rem;
+    z-index: 1;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f2f2f2;
+    min-width: 180px;
+    top: 100%;
+}
+
+.submenu li {
+    border-bottom: 1px solid #0622BF;
+}
+
+.submenu li a {
+    color: #0622BF;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.875rem;
+}
+
+.submenu li a:hover {
+    background-color: #FFD101;
+    color: #0622BF;
+    font-weight: bold;
+}
+
+.menu_m:hover .submenu {
+    display: block;
+}
+
+.bodywrap {
+    width: 100%;
+    /* background-color: #f2f2f2; */
+    position: relative;
+}
+
+section {
+    width: 100%;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    object-fit: contain;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+
+.design {
+    width: 100%;
+    min-height: 80vh; 
+    /* background-color: #f4f4f4; */
+    position: relative;
+    padding: 2rem 0;
+}
+
+.design h2 {
+    padding-top: 50px;
+    text-align: center;
+    color: #FFD101;
+    font-size: 3rem;
+    width: 1000px;
+    background-color: #0112AB;
+    margin: 0 auto;
+    padding: 0%;
+}
+
+.poster_box {
+    max-width: 1100px;
+    min-height: 450px;
+    width: 100%;
+    margin: 0 auto 50px;
+    padding: 2.5rem 2rem; 
+    border: 3px solid #0112AB;
+    border-radius: 25px; 
+    display: flex; 
+    /* align-items: center; */
+    gap: 2rem;
+    background: rgba(244, 244, 244, 0.7);
+    box-shadow: 0 0px 15px rgba(43, 43, 43, 0.3);
+
+    overflow: hidden; 
+    transition: max-height 0.7s cubic-bezier(.4,2,.6,1), box-shadow 0.4s, transform 0.4s; 
+    cursor: pointer;
+    flex-direction: column;
+    max-height: 340px;
+}
+
+.poster_main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 36px;
+}
+
+.hidden_img {
+    max-height: 0; 
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.hidden_img img {
+    width: 280px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.poster_hidden {
+/*     max-height: 0; 
+    opacity: 0;
+    transition: all 0.5s ease; */
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 28px;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 0.7s cubic-bezier(.4,2,.6,1), opacity 0.4s;
+}
+
+.poster_hidden img {
+    width: 140px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; 
+}
+
+.poster_hidden img:hover {
+  transform: scale(1.2) translateY(-20px); 
+  position: relative; 
+  z-index: 10; 
+}
+
+.poster_img {
+    width: 280px;
+    height: auto;
+    /* border: 3px solid #FFD101; */
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.poster_img:hover {
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(-20px); 
+}
+
+.poster_box:hover .hidden_img {
+    max-height: 500px; /* 이미지 높이에 맞게 조정 */
+    opacity: 1;
+}
+
+.poster_box:hover .poster_hidden {
+    max-height: 800px; /* 이미지 높이에 맞게 조정 */
+    opacity: 1;
+}
+
+.poster_box:hover {
+   max-height: 700px; /* 확장 시 충분히 크게 */
+    box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+    transform: translateY(-10px);
+}
+
+
+
+
+.poster_txt {
+/*     font-size: 1rem;
+    padding: 1rem;
+    flex: 1;
+    color: #0112AB; */
+
+    flex: 1;
+    color: #0112AB;
+    font-size: 1rem;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.poster_txt h4 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+footer {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    color: #0622BF;
+    height: 100px;
+    border-top: 3px solid #0622BF;
+    width: 100%;
+    /* top: 100px; 제거 */
+}
+
+footer p {
+    margin: 0;
+    cursor: pointer;
+}
+
+footer p:hover {
+    font-weight: bold;
+}
